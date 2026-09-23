@@ -1,52 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    background-color: #f2f4f8;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: #333;
-    margin: 0;
-    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    background:
+        radial-gradient(circle at top left, #172554 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #3b0764 0%, transparent 35%),
+        #080b14;
+    color: #f8fafc;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 50px 20px;
 }
 
+/* Contenedor principal */
 main {
-    max-width: 800px;
-    margin: auto;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
+/* Secciones */
 section {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.82);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 18px;
+    padding: 32px;
+    margin-bottom: 24px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(10px);
 }
 
+/* Presentación */
 .presentacion {
-    background-color: #e8f0fe;
+    min-height: 330px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid rgba(129, 140, 248, 0.35);
 }
 
+/* Nombre */
 h1 {
-    color: #1a4f8b;
-    font-size: 36px;
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+
+    background: linear-gradient(
+        90deg,
+        #60a5fa,
+        #818cf8,
+        #c084fc
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+/* Títulos */
 h2 {
-    color: #245b9e;
+    color: #93c5fd;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 18px;
+
+    border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+    padding-bottom: 12px;
+}
+
+/* Texto */
+p {
+    color: #cbd5e1;
+    font-size: 17px;
+    max-width: 750px;
+}
+
+/* Listas */
+ul {
+    list-style: none;
 }
 
 li {
-    margin-bottom: 10px;
+    color: #dbeafe;
+    padding: 13px 0;
+
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+
+    transition: 0.25s ease;
 }
 
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    color: #93c5fd;
+    padding-left: 8px;
+}
+
+/* Botón */
 .boton {
     display: inline-block;
-    background-color: #245b9e;
+
+    margin-top: 20px;
+    padding: 13px 26px;
+
+    background: linear-gradient(
+        135deg,
+        #3b82f6,
+        #6366f1
+    );
+
     color: white;
-    padding: 12px 20px;
+
     text-decoration: none;
-    border-radius: 6px;
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+
+    transition: 0.3s ease;
 }
 
 .boton:hover {
-    background-color: #163d6b;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(99, 102, 241, 0.4);
+}
+
+/* Adaptación para celular */
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+    section {
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
