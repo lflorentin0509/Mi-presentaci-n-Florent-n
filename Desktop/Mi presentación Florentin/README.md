@@ -13,3 +13,4 @@ La página incluye información sobre mis intereses, mis objetivos y las tecnolo
 - Git
 - GitHub
 
+Gracias por ver :)
